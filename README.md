@@ -1,4 +1,4 @@
-Repositório referente as aulas de Programação em Bnaco de Dados.
+Repositório referente as aulas de Programação em Banco de Dados.
 
 ---
 
