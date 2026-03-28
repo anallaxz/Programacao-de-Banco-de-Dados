@@ -63,3 +63,47 @@ VALUES
 (1005, 13, 105, 1, '2024-03-22');
 (1006, 10, 104, 1, '2024-03-25');
 
+
+-- att.4: A) 1
+SELECT MAX(preco_unitario) 
+FROM produtos 
+WHERE id_categoria = 3;
+-- Rspt: 3200
+
+-- att.4: A) 2
+SELECT MIN(preco_unitario) 
+FROM produtos 
+WHERE id_categoria = 2;
+-- Rspt: 850
+
+-- att.4: A) 3
+SELECT p.id_categoria, COUNT(DISTINCT v.id_produto)
+FROM vendas v
+JOIN produtos p ON v.id_produto = p.id_produto
+GROUP BY p.id_categoria;
+-- Rspt: id_1: 1, id_2: 2, id_3: 2. 
+
+-- att.4: B) 1
+SELECT MAX(p.preco_unitario) AS maior_valor
+FROM vendas v
+JOIN clientes c ON c.id_cliente = v.id_cliente
+JOIN produtos p ON p.id_produto = v.id_produto
+WHERE c.cidade = 'São Paulo'
+-- Rspt: 3200
+
+-- att.4: B) 2
+SELECT SUM(quantidade) 
+FROM vendas 
+WHERE id_produto = 101;
+-- Rspt: 2
+
+-- att.4: B) 3
+SELECT * 
+FROM vendas
+WHERE data_venda BETWEEN '2024-01-01' AND '2024-12-31';
+-- Rspt: 3200
+
+-- att.5
+INSERT INTO vendas VALUES (2000, 99, 101, 1, '2024-04-01');
+-- Rspt: vai dar erro de violação de chave estrangeira. 
+-- o comando tenta inserir uma venda e um cliente inexistentes em outras tabelas, então o banco protege a consistência dos dados.
