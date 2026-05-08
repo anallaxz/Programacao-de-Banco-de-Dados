@@ -6,10 +6,10 @@
 
 <br clear="both">
 
-<img align="left" height="80" src="https://cdn3.emoji.gg/emojis/35781-junimo-dance.gif"  />
+<img align="left" style="width: 5vw; height: 10vh; object-fit: contain" src="https://cdn3.emoji.gg/emojis/35781-junimo-dance.gif"  />
 
 ###
 
-<p align="left">Ciência da Computação, Anhanguera MARTE - Santana.<br>Lunna Luiza Souza Costa - 5º Semestre.<br>Prof. Nicolas Vogiantzis.</p>
+<p align="left"> &bull; Ciência da Computação, Anhanguera MARTE - Santana.<br> &bull; Lunna Luiza Souza Costa - 5º Semestre.<br> &bull; Prof. Nicolas Vogiantzis.</p>
 
 ###
